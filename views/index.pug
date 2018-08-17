@@ -1,6 +1,24 @@
 ﻿extends layout
 
 block content
-  h1= title
-  p Hello World!
+  h1 #{message}
   p Welcome to #{title}
+  p This is my first Express App. Express is a Node.js web application framework. Currently, I'm using a templating language called Pug.
+
+
+  script.
+    var f1 = function() {document.getElementById("pic").src = '#{pugs.pug1}' }
+  script.
+    var f2 = function() {document.getElementById("pic").src = '#{pugs.pug2}' }
+  script.
+    var f3 = function() {document.getElementById("pic").src = '#{pugs.pug3}' }
+    
+
+  button(type="button" onclick='f1()') First pug
+  button(type="button" onclick='f2()') Second pug
+  button(type="button" onclick='f3()') Third pug
+  
+  p
+  img(id='pic' height='450' width='350' src=' ')
+
+
